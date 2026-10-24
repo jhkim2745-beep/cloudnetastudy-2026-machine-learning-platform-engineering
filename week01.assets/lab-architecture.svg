@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="13">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker>
+  </defs>
+  <rect width="780" height="470" fill="#ffffff"/>
+  <!-- mac -->
+  <rect x="10" y="10" width="760" height="450" rx="14" fill="#f6f6f6" stroke="#888"/>
+  <text x="26" y="34" font-weight="bold" fill="#333">MacBook (Apple Silicon) — 브라우저 · kubectl · helm · git · docker</text>
+  <!-- port column -->
+  <g fill="#fff" stroke="#888">
+    <rect x="26" y="60" width="150" height="380" rx="10"/>
+  </g>
+  <text x="101" y="82" text-anchor="middle" font-weight="bold" fill="#333">localhost 포트</text>
+  <g fill="#222">
+    <text x="40" y="118">:3000  Gitea</text>
+    <text x="40" y="168">:8080  Argo CD</text>
+    <text x="40" y="218">:5050  MLflow</text>
+    <text x="40" y="268">:8888  KFP UI</text>
+    <text x="40" y="318">:3001  Grafana</text>
+    <text x="40" y="368">:8000  hello-mlops</text>
+  </g>
+  <!-- VM -->
+  <rect x="200" y="50" width="556" height="396" rx="12" fill="#eef1f6" stroke="#6b7fa6" stroke-dasharray="6 4"/>
+  <text x="216" y="72" fill="#3e5480">Docker Desktop / OrbStack 리눅스 VM</text>
+  <!-- kind -->
+  <rect x="214" y="84" width="528" height="350" rx="12" fill="#ffffff" stroke="#326ce5" stroke-width="1.5"/>
+  <text x="230" y="106" font-weight="bold" fill="#326ce5">kind 클러스터 "mlops" (control-plane + worker)</text>
+  <g stroke="#9aa7c0" fill="#f7f9fd">
+    <rect x="230" y="120" width="160" height="70" rx="8"/>
+    <rect x="404" y="120" width="160" height="70" rx="8"/>
+    <rect x="578" y="120" width="150" height="70" rx="8"/>
+    <rect x="230" y="206" width="160" height="70" rx="8"/>
+    <rect x="404" y="206" width="160" height="70" rx="8"/>
+    <rect x="578" y="206" width="150" height="70" rx="8"/>
+  </g>
+  <g text-anchor="middle">
+    <text x="310" y="148" font-weight="bold">gitea</text><text x="310" y="170" font-size="12" fill="#555">Git 저장소 (GitOps 원천)</text>
+    <text x="484" y="148" font-weight="bold">argocd</text><text x="484" y="170" font-size="12" fill="#555">Git → 클러스터 동기화</text>
+    <text x="653" y="148" font-weight="bold">mlflow</text><text x="653" y="170" font-size="12" fill="#555">실험 추적·레지스트리</text>
+    <text x="310" y="234" font-weight="bold">kubeflow</text><text x="310" y="256" font-size="12" fill="#555">Pipelines (KFP)</text>
+    <text x="484" y="234" font-weight="bold">monitoring</text><text x="484" y="256" font-size="12" fill="#555">Prometheus·Grafana</text>
+    <text x="653" y="234" font-weight="bold">hello-mlops</text><text x="653" y="256" font-size="12" fill="#555">샘플 FastAPI 앱</text>
+  </g>
+  <g stroke="#555" fill="none" stroke-width="1.5" marker-end="url(#a)">
+    <path d="M390 155 H402"/>
+    <path d="M484 190 Q600 190 640 204"/>
+  </g>
+  <text x="560" y="300" font-size="12" fill="#555" text-anchor="middle">Argo CD가 Gitea의 매니페스트를 읽어 hello-mlops 배포</text>
+  <rect x="230" y="318" width="498" height="96" rx="8" fill="#fbfbf3" stroke="#c9b458"/>
+  <text x="246" y="342" font-weight="bold" fill="#6b5c12">NodePort + extraPortMappings</text>
+  <text x="246" y="364" fill="#444">localhost:&lt;포트&gt; → 노드 컨테이너 :&lt;NodePort&gt; → 서비스 → 파드</text>
+  <text x="246" y="386" fill="#444">예) :3000 → 30300 → gitea-http:3000 → Gitea 파드</text>
+  <text x="246" y="406" font-size="12" fill="#777">포트 매핑은 클러스터 생성 때만 지정할 수 있으므로 미리 열어 둔다</text>
+  <!-- arrows from ports -->
+  <g stroke="#bbb" stroke-dasharray="3 3"><path d="M176 113 H214"/><path d="M176 163 H214"/><path d="M176 213 H214"/><path d="M176 263 H214"/><path d="M176 313 H214"/><path d="M176 363 H214"/></g>
+</svg>

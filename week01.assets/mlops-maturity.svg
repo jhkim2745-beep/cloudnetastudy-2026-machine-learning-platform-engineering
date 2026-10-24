@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 230" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="13">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#777"/></marker>
+  </defs>
+  <rect width="760" height="230" fill="#ffffff"/>
+  <g stroke-width="1.5">
+    <rect x="20" y="40" width="220" height="170" rx="12" fill="#fdf0ee" stroke="#c0675a"/>
+    <rect x="270" y="40" width="220" height="170" rx="12" fill="#fff8e6" stroke="#c99a2e"/>
+    <rect x="520" y="40" width="220" height="170" rx="12" fill="#eef7ea" stroke="#5a9a3e"/>
+  </g>
+  <g stroke="#777" stroke-width="2" marker-end="url(#a)"><path d="M242 125 H266"/><path d="M492 125 H516"/></g>
+  <g font-weight="bold" text-anchor="middle">
+    <text x="130" y="68" fill="#a24a3d">레벨 0 · 수동</text>
+    <text x="380" y="68" fill="#9a7414">레벨 1 · 파이프라인 자동화</text>
+    <text x="630" y="68" fill="#3f7a26">레벨 2 · CI/CD 자동화</text>
+  </g>
+  <g fill="#333">
+    <text x="36" y="98">• 노트북에서 수작업 실험</text>
+    <text x="36" y="122">• 모델 파일을 손으로 전달</text>
+    <text x="36" y="146">• 재훈련이 드물고 느림</text>
+    <text x="36" y="170">• 모니터링 거의 없음</text>
+    <text x="286" y="98">• 훈련 파이프라인 자동 실행</text>
+    <text x="286" y="122">• 실험 = 운영 파이프라인</text>
+    <text x="286" y="146">• 새 데이터로 지속적 훈련</text>
+    <text x="286" y="170">• 피처 스토어·레지스트리</text>
+    <text x="536" y="98">• 파이프라인 자체를 CI/CD</text>
+    <text x="536" y="122">• 컴포넌트 테스트·배포 자동화</text>
+    <text x="536" y="146">• 모니터링이 재훈련을 트리거</text>
+    <text x="536" y="170">• 팀 전체가 파이프라인 공유</text>
+  </g>
+  <text x="380" y="24" text-anchor="middle" fill="#555">자동화 범위가 넓어질수록 → 배포 주기는 짧아지고, 재현성은 높아진다</text>
+</svg>
